@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__Sticker__DefineHelperClasses !== "undefined") {
 gdjs.evtsExt__Sticker__DefineHelperClasses = {};
 
 
-gdjs.evtsExt__Sticker__DefineHelperClasses.userFunc0x79fe20 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Sticker__DefineHelperClasses.userFunc0xbec0c8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (gdjs._stickerExtension) {
     return;
@@ -266,7 +266,7 @@ gdjs.evtsExt__Sticker__DefineHelperClasses.eventsList0 = function(runtimeScene, 
 {
 
 
-gdjs.evtsExt__Sticker__DefineHelperClasses.userFunc0x79fe20(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__Sticker__DefineHelperClasses.userFunc0xbec0c8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

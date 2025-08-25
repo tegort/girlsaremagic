@@ -30,6 +30,9 @@ gdjs.displayCode.GDchanelObjects3= [];
 gdjs.displayCode.GDpollenObjects1= [];
 gdjs.displayCode.GDpollenObjects2= [];
 gdjs.displayCode.GDpollenObjects3= [];
+gdjs.displayCode.GDbackground2Objects1= [];
+gdjs.displayCode.GDbackground2Objects2= [];
+gdjs.displayCode.GDbackground2Objects3= [];
 gdjs.displayCode.GDlolaObjects1= [];
 gdjs.displayCode.GDlolaObjects2= [];
 gdjs.displayCode.GDlolaObjects3= [];
@@ -633,31 +636,11 @@ if (isConditionTrue_0) {
 
 
 };gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDprintObjects1Objects = Hashtable.newFrom({"print": gdjs.displayCode.GDprintObjects1});
-gdjs.displayCode.eventsList3 = function(runtimeScene) {
-
-{
-
-
-let isConditionTrue_0 = false;
-{
-gdjs.copyArray(runtimeScene.getObjects("ScreenshotPath"), gdjs.displayCode.GDScreenshotPathObjects1);
-{for(var i = 0, len = gdjs.displayCode.GDScreenshotPathObjects1.length ;i < len;++i) {
-    gdjs.displayCode.GDScreenshotPathObjects1[i].getBehavior("Text").setText("Screenshot saved!");
-}
-}{for(var i = 0, len = gdjs.displayCode.GDScreenshotPathObjects1.length ;i < len;++i) {
-    gdjs.displayCode.GDScreenshotPathObjects1[i].setX((gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 3) - ((gdjs.displayCode.GDScreenshotPathObjects1[i].getWidth()) / 3));
-}
-}{for(var i = 0, len = gdjs.displayCode.GDScreenshotPathObjects1.length ;i < len;++i) {
-    gdjs.displayCode.GDScreenshotPathObjects1[i].hide(false);
-}
-}}
-
-}
-
-
-};gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDleftObjects1Objects = Hashtable.newFrom({"left": gdjs.displayCode.GDleftObjects1});
+gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDbackground2Objects1Objects = Hashtable.newFrom({"background2": gdjs.displayCode.GDbackground2Objects1});
+gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDbackground2Objects1Objects = Hashtable.newFrom({"background2": gdjs.displayCode.GDbackground2Objects1});
+gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDleftObjects1Objects = Hashtable.newFrom({"left": gdjs.displayCode.GDleftObjects1});
 gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDiconObjects2Objects = Hashtable.newFrom({"icon": gdjs.displayCode.GDiconObjects2});
-gdjs.displayCode.eventsList4 = function(runtimeScene) {
+gdjs.displayCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -697,7 +680,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.displayCode.eventsList5 = function(runtimeScene) {
+};gdjs.displayCode.eventsList4 = function(runtimeScene) {
 
 {
 
@@ -782,13 +765,27 @@ isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.displayCode.mapOfGDg
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13062796);
+}
+}
 }
 if (isConditionTrue_0) {
-{gdjs.screenshot.takeScreenshot(runtimeScene, gdjs.fileSystem.getDesktopPath(runtimeScene) + gdjs.fileSystem.getPathDelimiter() + "GAM_Screenshot.png");
+gdjs.copyArray(runtimeScene.getObjects("ScreenshotPath"), gdjs.displayCode.GDScreenshotPathObjects1);
+gdjs.copyArray(runtimeScene.getObjects("background2"), gdjs.displayCode.GDbackground2Objects1);
+{gdjs.evtsExt__RenderToSprite__RenderScene.func(runtimeScene, gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDbackground2Objects1Objects, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}{gdjs.evtsExt__UploadDownloadImageFile__DownloadImage.func(runtimeScene, gdjs.displayCode.mapOfGDgdjs_9546displayCode_9546GDbackground2Objects1Objects, "GAM_Screenshot", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
+}{for(var i = 0, len = gdjs.displayCode.GDScreenshotPathObjects1.length ;i < len;++i) {
+    gdjs.displayCode.GDScreenshotPathObjects1[i].getBehavior("Text").setText("Screenshot saved!");
 }
-{ //Subevents
-gdjs.displayCode.eventsList3(runtimeScene);} //End of subevents
+}{for(var i = 0, len = gdjs.displayCode.GDScreenshotPathObjects1.length ;i < len;++i) {
+    gdjs.displayCode.GDScreenshotPathObjects1[i].setX((gdjs.evtTools.window.getGameResolutionWidth(runtimeScene) / 2) - ((gdjs.displayCode.GDScreenshotPathObjects1[i].getWidth()) / 2));
 }
+}{for(var i = 0, len = gdjs.displayCode.GDScreenshotPathObjects1.length ;i < len;++i) {
+    gdjs.displayCode.GDScreenshotPathObjects1[i].hide(false);
+}
+}}
 
 }
 
@@ -814,7 +811,7 @@ if (isConditionTrue_0) {
 {
 
 
-gdjs.displayCode.eventsList4(runtimeScene);
+gdjs.displayCode.eventsList3(runtimeScene);
 }
 
 
@@ -853,6 +850,9 @@ gdjs.displayCode.GDchanelObjects3.length = 0;
 gdjs.displayCode.GDpollenObjects1.length = 0;
 gdjs.displayCode.GDpollenObjects2.length = 0;
 gdjs.displayCode.GDpollenObjects3.length = 0;
+gdjs.displayCode.GDbackground2Objects1.length = 0;
+gdjs.displayCode.GDbackground2Objects2.length = 0;
+gdjs.displayCode.GDbackground2Objects3.length = 0;
 gdjs.displayCode.GDlolaObjects1.length = 0;
 gdjs.displayCode.GDlolaObjects2.length = 0;
 gdjs.displayCode.GDlolaObjects3.length = 0;
@@ -1157,7 +1157,7 @@ gdjs.displayCode.GDshoe11Objects1.length = 0;
 gdjs.displayCode.GDshoe11Objects2.length = 0;
 gdjs.displayCode.GDshoe11Objects3.length = 0;
 
-gdjs.displayCode.eventsList5(runtimeScene);
+gdjs.displayCode.eventsList4(runtimeScene);
 gdjs.displayCode.GDbackgroundObjects1.length = 0;
 gdjs.displayCode.GDbackgroundObjects2.length = 0;
 gdjs.displayCode.GDbackgroundObjects3.length = 0;
@@ -1188,6 +1188,9 @@ gdjs.displayCode.GDchanelObjects3.length = 0;
 gdjs.displayCode.GDpollenObjects1.length = 0;
 gdjs.displayCode.GDpollenObjects2.length = 0;
 gdjs.displayCode.GDpollenObjects3.length = 0;
+gdjs.displayCode.GDbackground2Objects1.length = 0;
+gdjs.displayCode.GDbackground2Objects2.length = 0;
+gdjs.displayCode.GDbackground2Objects3.length = 0;
 gdjs.displayCode.GDlolaObjects1.length = 0;
 gdjs.displayCode.GDlolaObjects2.length = 0;
 gdjs.displayCode.GDlolaObjects3.length = 0;

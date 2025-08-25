@@ -375,7 +375,7 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.areSceneAssetsLoaded(runtimeScene, "display");
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Песня одевалка.mp3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), true, 10, 1);
 }}
@@ -411,28 +411,6 @@ gdjs.zastavkaCode.eventsList0(runtimeScene);} //End of subevents
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("game"), gdjs.zastavkaCode.GDgameObjects2);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.zastavkaCode.GDgameObjects2.length;i<l;++i) {
-    if ( gdjs.zastavkaCode.GDgameObjects2[i].getBehavior("ButtonFSM").IsHovered((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.zastavkaCode.GDgameObjects2[k] = gdjs.zastavkaCode.GDgameObjects2[i];
-        ++k;
-    }
-}
-gdjs.zastavkaCode.GDgameObjects2.length = k;
-if (isConditionTrue_0) {
-{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Звучок Play.mp3", runtimeScene.getGame().getVariables().getFromIndex(10).getAsNumber(), false, 10, 1);
-}}
-
-}
-
-
-{
-
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
@@ -440,6 +418,38 @@ isConditionTrue_0 = gdjs.evtTools.sound.isMusicOnChannelStopped(runtimeScene, ru
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.continueMusicOnChannel(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
+
+}
+
+
+};gdjs.zastavkaCode.eventsList3 = function(runtimeScene) {
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("game"), gdjs.zastavkaCode.GDgameObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.zastavkaCode.GDgameObjects2.length;i<l;++i) {
+    if ( gdjs.zastavkaCode.GDgameObjects2[i].getBehavior("ButtonFSM").IsFocused((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.zastavkaCode.GDgameObjects2[k] = gdjs.zastavkaCode.GDgameObjects2[i];
+        ++k;
+    }
+}
+gdjs.zastavkaCode.GDgameObjects2.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13038420);
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.stopMusicOnChannel(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Звучок Play.mp3", runtimeScene.getGame().getVariables().getFromIndex(10).getAsNumber(), false, 10, 1);
+}
+{ //Subevents
+gdjs.zastavkaCode.eventsList2(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -465,7 +475,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.zastavkaCode.eventsList3 = function(runtimeScene) {
+};gdjs.zastavkaCode.eventsList4 = function(runtimeScene) {
 
 {
 
@@ -477,7 +487,7 @@ gdjs.zastavkaCode.eventsList1(runtimeScene);
 {
 
 
-gdjs.zastavkaCode.eventsList2(runtimeScene);
+gdjs.zastavkaCode.eventsList3(runtimeScene);
 }
 
 
@@ -799,7 +809,7 @@ gdjs.zastavkaCode.GDshoe11Objects1.length = 0;
 gdjs.zastavkaCode.GDshoe11Objects2.length = 0;
 gdjs.zastavkaCode.GDshoe11Objects3.length = 0;
 
-gdjs.zastavkaCode.eventsList3(runtimeScene);
+gdjs.zastavkaCode.eventsList4(runtimeScene);
 gdjs.zastavkaCode.GDbackgroundObjects1.length = 0;
 gdjs.zastavkaCode.GDbackgroundObjects2.length = 0;
 gdjs.zastavkaCode.GDbackgroundObjects3.length = 0;
