@@ -1262,9 +1262,102 @@ gdjs.dressupCode.GDshoe11Objects4= [];
 gdjs.dressupCode.GDshoe11Objects5= [];
 
 
+gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDMuteObjects1Objects = Hashtable.newFrom({"Mute": gdjs.dressupCode.GDMuteObjects1});
 gdjs.dressupCode.eventsList0 = function(runtimeScene) {
 
+{
+
+gdjs.copyArray(gdjs.dressupCode.GDMuteObjects1, gdjs.dressupCode.GDMuteObjects2);
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.dressupCode.GDMuteObjects2.length;i<l;++i) {
+    if ( gdjs.dressupCode.GDMuteObjects2[i].getVariableBoolean(gdjs.dressupCode.GDMuteObjects2[i].getVariables().getFromIndex(0), false, false) ) {
+        isConditionTrue_0 = true;
+        gdjs.dressupCode.GDMuteObjects2[k] = gdjs.dressupCode.GDMuteObjects2[i];
+        ++k;
+    }
+}
+gdjs.dressupCode.GDMuteObjects2.length = k;
+if (isConditionTrue_0) {
+/* Reuse gdjs.dressupCode.GDMuteObjects2 */
+{for(var i = 0, len = gdjs.dressupCode.GDMuteObjects2.length ;i < len;++i) {
+    gdjs.dressupCode.GDMuteObjects2[i].getBehavior("Animation").setAnimationName("Unmuted");
+}
+}{gdjs.evtTools.sound.setMusicOnChannelVolume(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 100);
+}}
+
+}
+
+
+{
+
+/* Reuse gdjs.dressupCode.GDMuteObjects1 */
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.dressupCode.GDMuteObjects1.length;i<l;++i) {
+    if ( gdjs.dressupCode.GDMuteObjects1[i].getVariableBoolean(gdjs.dressupCode.GDMuteObjects1[i].getVariables().getFromIndex(0), true, false) ) {
+        isConditionTrue_0 = true;
+        gdjs.dressupCode.GDMuteObjects1[k] = gdjs.dressupCode.GDMuteObjects1[i];
+        ++k;
+    }
+}
+gdjs.dressupCode.GDMuteObjects1.length = k;
+if (isConditionTrue_0) {
+/* Reuse gdjs.dressupCode.GDMuteObjects1 */
+{for(var i = 0, len = gdjs.dressupCode.GDMuteObjects1.length ;i < len;++i) {
+    gdjs.dressupCode.GDMuteObjects1[i].getBehavior("Animation").setAnimationName("Muted");
+}
+}{gdjs.evtTools.sound.setMusicOnChannelVolume(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 0);
+}}
+
+}
+
+
 };gdjs.dressupCode.eventsList1 = function(runtimeScene) {
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
+if (isConditionTrue_0) {
+{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Песня одевалка.mp3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), true, 10, 1);
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("Mute"), gdjs.dressupCode.GDMuteObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDMuteObjects1Objects, runtimeScene, true, false);
+}
+if (isConditionTrue_0) {
+/* Reuse gdjs.dressupCode.GDMuteObjects1 */
+{for(var i = 0, len = gdjs.dressupCode.GDMuteObjects1.length ;i < len;++i) {
+    gdjs.dressupCode.GDMuteObjects1[i].returnVariable(gdjs.dressupCode.GDMuteObjects1[i].getVariables().getFromIndex(0)).toggle();
+}
+}
+{ //Subevents
+gdjs.dressupCode.eventsList0(runtimeScene);} //End of subevents
+}
+
+}
+
+
+};gdjs.dressupCode.eventsList2 = function(runtimeScene) {
+
+};gdjs.dressupCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -3084,7 +3177,7 @@ for(var i = 0, len = gdjs.dressupCode.GDshoe11Objects3.length ;i < len;++i) {
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDtrashObjects2Objects = Hashtable.newFrom({"trash": gdjs.dressupCode.GDtrashObjects2});
 gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDclearObjects2Objects = Hashtable.newFrom({"clear": gdjs.dressupCode.GDclearObjects2});
 gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDsshoes3Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop1Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop5lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt5lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe3Objects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt2Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop4Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop1Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop2lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr1lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr2lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr3lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr8lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr11lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr9lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr10lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr4lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr6lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr7lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr5lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr12lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe41lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe42lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe51lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe52lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe11lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe12lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe21lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe22lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop3lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop4lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt1lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDdresslolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt2lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt3lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt4lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe31lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe32lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop1lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt3Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes1Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes12Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes2Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes21Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe4Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe41Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe5Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshot51Objects3ObjectsGDgdjs_9546dressupCode_9546GDsstoneObjects3ObjectsGDgdjs_9546dressupCode_9546GDlleftearObjects3ObjectsGDgdjs_9546dressupCode_9546GDbbracelet2Objects3ObjectsGDgdjs_9546dressupCode_9546GDoobodok3Objects3ObjectsGDgdjs_9546dressupCode_9546GDssumkaObjects3ObjectsGDgdjs_9546dressupCode_9546GDbbracelet1Objects3ObjectsGDgdjs_9546dressupCode_9546GDklubnikaObjects3ObjectsGDgdjs_9546dressupCode_9546GDbusyObjects3ObjectsGDgdjs_9546dressupCode_9546GDoobodok1Objects3ObjectsGDgdjs_9546dressupCode_9546GDrrightearObjects3ObjectsGDgdjs_9546dressupCode_9546GDbberetObjects3ObjectsGDgdjs_9546dressupCode_9546GDgglassesObjects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt4Objects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt5Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop2Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop5Objects3ObjectsGDgdjs_9546dressupCode_9546GDddressObjects3ObjectsGDgdjs_9546dressupCode_9546GDglasses1Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop3Objects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt1Objects3ObjectsGDgdjs_9546dressupCode_9546GDeyes2Objects3ObjectsGDgdjs_9546dressupCode_9546GDstone2Objects3ObjectsGDgdjs_9546dressupCode_9546GDstone1Objects3ObjectsGDgdjs_9546dressupCode_9546GDbracelet3Objects3ObjectsGDgdjs_9546dressupCode_9546GDleftearObjects3ObjectsGDgdjs_9546dressupCode_9546GDrightearObjects3ObjectsGDgdjs_9546dressupCode_9546GDbandanaObjects3ObjectsGDgdjs_9546dressupCode_9546GDflowerObjects3ObjectsGDgdjs_9546dressupCode_9546GDzakolkaObjects3ObjectsGDgdjs_9546dressupCode_9546GDbracelet2Objects3ObjectsGDgdjs_9546dressupCode_9546GDbracelet1Objects3ObjectsGDgdjs_9546dressupCode_9546GDobodokObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop5Objects3ObjectsGDgdjs_9546dressupCode_9546GDdressObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop4Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop3Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop2Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt5Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt4Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt3Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt2Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt1Objects3ObjectsGDgdjs_9546dressupCode_9546GDshor52Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe51Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe42Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe41Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe31Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe32Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe22Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe21Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe12Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe11Objects3Objects = Hashtable.newFrom({"sshoes3": gdjs.dressupCode.GDsshoes3Objects3, "top1": gdjs.dressupCode.GDtop1Objects3, "top5lola": gdjs.dressupCode.GDtop5lolaObjects3, "skirt5lola": gdjs.dressupCode.GDskirt5lolaObjects3, "sshoe3": gdjs.dressupCode.GDsshoe3Objects3, "sskirt2": gdjs.dressupCode.GDsskirt2Objects3, "ttop4": gdjs.dressupCode.GDttop4Objects3, "ttop1": gdjs.dressupCode.GDttop1Objects3, "top2lola": gdjs.dressupCode.GDtop2lolaObjects3, "ukr1lola": gdjs.dressupCode.GDukr1lolaObjects3, "ukr2lola": gdjs.dressupCode.GDukr2lolaObjects3, "ukr3lola": gdjs.dressupCode.GDukr3lolaObjects3, "ukr8lola": gdjs.dressupCode.GDukr8lolaObjects3, "ukr11lola": gdjs.dressupCode.GDukr11lolaObjects3, "ukr9lola": gdjs.dressupCode.GDukr9lolaObjects3, "ukr10lola": gdjs.dressupCode.GDukr10lolaObjects3, "ukr4lola": gdjs.dressupCode.GDukr4lolaObjects3, "ukr6lola": gdjs.dressupCode.GDukr6lolaObjects3, "ukr7lola": gdjs.dressupCode.GDukr7lolaObjects3, "ukr5lola": gdjs.dressupCode.GDukr5lolaObjects3, "ukr12lola": gdjs.dressupCode.GDukr12lolaObjects3, "shoe41lola": gdjs.dressupCode.GDshoe41lolaObjects3, "shoe42lola": gdjs.dressupCode.GDshoe42lolaObjects3, "shoe51lola": gdjs.dressupCode.GDshoe51lolaObjects3, "shoe52lola": gdjs.dressupCode.GDshoe52lolaObjects3, "shoe11lola": gdjs.dressupCode.GDshoe11lolaObjects3, "shoe12lola": gdjs.dressupCode.GDshoe12lolaObjects3, "shoe21lola": gdjs.dressupCode.GDshoe21lolaObjects3, "shoe22lola": gdjs.dressupCode.GDshoe22lolaObjects3, "top3lola": gdjs.dressupCode.GDtop3lolaObjects3, "top4lola": gdjs.dressupCode.GDtop4lolaObjects3, "skirt1lola": gdjs.dressupCode.GDskirt1lolaObjects3, "dresslola": gdjs.dressupCode.GDdresslolaObjects3, "skirt2lola": gdjs.dressupCode.GDskirt2lolaObjects3, "skirt3lola": gdjs.dressupCode.GDskirt3lolaObjects3, "skirt4lola": gdjs.dressupCode.GDskirt4lolaObjects3, "shoe31lola": gdjs.dressupCode.GDshoe31lolaObjects3, "shoe32lola": gdjs.dressupCode.GDshoe32lolaObjects3, "top1lola": gdjs.dressupCode.GDtop1lolaObjects3, "sskirt3": gdjs.dressupCode.GDsskirt3Objects3, "sshoes1": gdjs.dressupCode.GDsshoes1Objects3, "sshoes12": gdjs.dressupCode.GDsshoes12Objects3, "sshoes2": gdjs.dressupCode.GDsshoes2Objects3, "sshoes21": gdjs.dressupCode.GDsshoes21Objects3, "sshoe4": gdjs.dressupCode.GDsshoe4Objects3, "sshoe41": gdjs.dressupCode.GDsshoe41Objects3, "sshoe5": gdjs.dressupCode.GDsshoe5Objects3, "sshot51": gdjs.dressupCode.GDsshot51Objects3, "sstone": gdjs.dressupCode.GDsstoneObjects3, "lleftear": gdjs.dressupCode.GDlleftearObjects3, "bbracelet2": gdjs.dressupCode.GDbbracelet2Objects3, "oobodok3": gdjs.dressupCode.GDoobodok3Objects3, "ssumka": gdjs.dressupCode.GDssumkaObjects3, "bbracelet1": gdjs.dressupCode.GDbbracelet1Objects3, "klubnika": gdjs.dressupCode.GDklubnikaObjects3, "busy": gdjs.dressupCode.GDbusyObjects3, "oobodok1": gdjs.dressupCode.GDoobodok1Objects3, "rrightear": gdjs.dressupCode.GDrrightearObjects3, "bberet": gdjs.dressupCode.GDbberetObjects3, "gglasses": gdjs.dressupCode.GDgglassesObjects3, "sskirt4": gdjs.dressupCode.GDsskirt4Objects3, "sskirt5": gdjs.dressupCode.GDsskirt5Objects3, "ttop2": gdjs.dressupCode.GDttop2Objects3, "ttop5": gdjs.dressupCode.GDttop5Objects3, "ddress": gdjs.dressupCode.GDddressObjects3, "glasses1": gdjs.dressupCode.GDglasses1Objects3, "ttop3": gdjs.dressupCode.GDttop3Objects3, "sskirt1": gdjs.dressupCode.GDsskirt1Objects3, "eyes2": gdjs.dressupCode.GDeyes2Objects3, "stone2": gdjs.dressupCode.GDstone2Objects3, "stone1": gdjs.dressupCode.GDstone1Objects3, "bracelet3": gdjs.dressupCode.GDbracelet3Objects3, "leftear": gdjs.dressupCode.GDleftearObjects3, "rightear": gdjs.dressupCode.GDrightearObjects3, "bandana": gdjs.dressupCode.GDbandanaObjects3, "flower": gdjs.dressupCode.GDflowerObjects3, "zakolka": gdjs.dressupCode.GDzakolkaObjects3, "bracelet2": gdjs.dressupCode.GDbracelet2Objects3, "bracelet1": gdjs.dressupCode.GDbracelet1Objects3, "obodok": gdjs.dressupCode.GDobodokObjects3, "top5": gdjs.dressupCode.GDtop5Objects3, "dress": gdjs.dressupCode.GDdressObjects3, "top4": gdjs.dressupCode.GDtop4Objects3, "top3": gdjs.dressupCode.GDtop3Objects3, "top2": gdjs.dressupCode.GDtop2Objects3, "skirt5": gdjs.dressupCode.GDskirt5Objects3, "skirt4": gdjs.dressupCode.GDskirt4Objects3, "skirt3": gdjs.dressupCode.GDskirt3Objects3, "skirt2": gdjs.dressupCode.GDskirt2Objects3, "skirt1": gdjs.dressupCode.GDskirt1Objects3, "shor52": gdjs.dressupCode.GDshor52Objects3, "shoe51": gdjs.dressupCode.GDshoe51Objects3, "shoe42": gdjs.dressupCode.GDshoe42Objects3, "shoe41": gdjs.dressupCode.GDshoe41Objects3, "shoe31": gdjs.dressupCode.GDshoe31Objects3, "shoe32": gdjs.dressupCode.GDshoe32Objects3, "shoe22": gdjs.dressupCode.GDshoe22Objects3, "shoe21": gdjs.dressupCode.GDshoe21Objects3, "shoe12": gdjs.dressupCode.GDshoe12Objects3, "shoe11": gdjs.dressupCode.GDshoe11Objects3});
-gdjs.dressupCode.eventsList2 = function(runtimeScene) {
+gdjs.dressupCode.eventsList4 = function(runtimeScene) {
 
 {
 
@@ -4010,9 +4103,9 @@ for(var i = 0, len = gdjs.dressupCode.GDshoe11Objects2.length ;i < len;++i) {
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDchicObjects2Objects = Hashtable.newFrom({"chic": gdjs.dressupCode.GDchicObjects2});
 gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDsshoes3Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop1Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop5lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt5lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe3Objects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt2Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop4Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop1Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop2lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr1lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr2lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr3lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr8lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr11lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr9lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr10lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr4lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr6lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr7lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr5lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDukr12lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe41lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe42lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe51lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe52lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe11lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe12lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe21lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe22lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop3lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop4lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt1lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDdresslolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt2lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt3lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDskirt4lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe31lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDshoe32lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop1lolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt3Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes1Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes12Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes2Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoes21Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe4Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe41Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshoe5Objects3ObjectsGDgdjs_9546dressupCode_9546GDsshot51Objects3ObjectsGDgdjs_9546dressupCode_9546GDsstoneObjects3ObjectsGDgdjs_9546dressupCode_9546GDlleftearObjects3ObjectsGDgdjs_9546dressupCode_9546GDbbracelet2Objects3ObjectsGDgdjs_9546dressupCode_9546GDoobodok3Objects3ObjectsGDgdjs_9546dressupCode_9546GDssumkaObjects3ObjectsGDgdjs_9546dressupCode_9546GDbbracelet1Objects3ObjectsGDgdjs_9546dressupCode_9546GDklubnikaObjects3ObjectsGDgdjs_9546dressupCode_9546GDbusyObjects3ObjectsGDgdjs_9546dressupCode_9546GDoobodok1Objects3ObjectsGDgdjs_9546dressupCode_9546GDrrightearObjects3ObjectsGDgdjs_9546dressupCode_9546GDbberetObjects3ObjectsGDgdjs_9546dressupCode_9546GDgglassesObjects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt4Objects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt5Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop2Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop5Objects3ObjectsGDgdjs_9546dressupCode_9546GDddressObjects3ObjectsGDgdjs_9546dressupCode_9546GDglasses1Objects3ObjectsGDgdjs_9546dressupCode_9546GDttop3Objects3ObjectsGDgdjs_9546dressupCode_9546GDsskirt1Objects3ObjectsGDgdjs_9546dressupCode_9546GDeyes2Objects3ObjectsGDgdjs_9546dressupCode_9546GDstone2Objects3ObjectsGDgdjs_9546dressupCode_9546GDstone1Objects3ObjectsGDgdjs_9546dressupCode_9546GDbracelet3Objects3ObjectsGDgdjs_9546dressupCode_9546GDleftearObjects3ObjectsGDgdjs_9546dressupCode_9546GDrightearObjects3ObjectsGDgdjs_9546dressupCode_9546GDbandanaObjects3ObjectsGDgdjs_9546dressupCode_9546GDflowerObjects3ObjectsGDgdjs_9546dressupCode_9546GDzakolkaObjects3ObjectsGDgdjs_9546dressupCode_9546GDbracelet2Objects3ObjectsGDgdjs_9546dressupCode_9546GDbracelet1Objects3ObjectsGDgdjs_9546dressupCode_9546GDobodokObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop5Objects3ObjectsGDgdjs_9546dressupCode_9546GDdressObjects3ObjectsGDgdjs_9546dressupCode_9546GDtop4Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop3Objects3ObjectsGDgdjs_9546dressupCode_9546GDtop2Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt5Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt4Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt3Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt2Objects3ObjectsGDgdjs_9546dressupCode_9546GDskirt1Objects3ObjectsGDgdjs_9546dressupCode_9546GDshor52Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe51Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe42Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe41Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe31Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe32Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe22Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe21Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe12Objects3ObjectsGDgdjs_9546dressupCode_9546GDshoe11Objects3Objects = Hashtable.newFrom({"sshoes3": gdjs.dressupCode.GDsshoes3Objects3, "top1": gdjs.dressupCode.GDtop1Objects3, "top5lola": gdjs.dressupCode.GDtop5lolaObjects3, "skirt5lola": gdjs.dressupCode.GDskirt5lolaObjects3, "sshoe3": gdjs.dressupCode.GDsshoe3Objects3, "sskirt2": gdjs.dressupCode.GDsskirt2Objects3, "ttop4": gdjs.dressupCode.GDttop4Objects3, "ttop1": gdjs.dressupCode.GDttop1Objects3, "top2lola": gdjs.dressupCode.GDtop2lolaObjects3, "ukr1lola": gdjs.dressupCode.GDukr1lolaObjects3, "ukr2lola": gdjs.dressupCode.GDukr2lolaObjects3, "ukr3lola": gdjs.dressupCode.GDukr3lolaObjects3, "ukr8lola": gdjs.dressupCode.GDukr8lolaObjects3, "ukr11lola": gdjs.dressupCode.GDukr11lolaObjects3, "ukr9lola": gdjs.dressupCode.GDukr9lolaObjects3, "ukr10lola": gdjs.dressupCode.GDukr10lolaObjects3, "ukr4lola": gdjs.dressupCode.GDukr4lolaObjects3, "ukr6lola": gdjs.dressupCode.GDukr6lolaObjects3, "ukr7lola": gdjs.dressupCode.GDukr7lolaObjects3, "ukr5lola": gdjs.dressupCode.GDukr5lolaObjects3, "ukr12lola": gdjs.dressupCode.GDukr12lolaObjects3, "shoe41lola": gdjs.dressupCode.GDshoe41lolaObjects3, "shoe42lola": gdjs.dressupCode.GDshoe42lolaObjects3, "shoe51lola": gdjs.dressupCode.GDshoe51lolaObjects3, "shoe52lola": gdjs.dressupCode.GDshoe52lolaObjects3, "shoe11lola": gdjs.dressupCode.GDshoe11lolaObjects3, "shoe12lola": gdjs.dressupCode.GDshoe12lolaObjects3, "shoe21lola": gdjs.dressupCode.GDshoe21lolaObjects3, "shoe22lola": gdjs.dressupCode.GDshoe22lolaObjects3, "top3lola": gdjs.dressupCode.GDtop3lolaObjects3, "top4lola": gdjs.dressupCode.GDtop4lolaObjects3, "skirt1lola": gdjs.dressupCode.GDskirt1lolaObjects3, "dresslola": gdjs.dressupCode.GDdresslolaObjects3, "skirt2lola": gdjs.dressupCode.GDskirt2lolaObjects3, "skirt3lola": gdjs.dressupCode.GDskirt3lolaObjects3, "skirt4lola": gdjs.dressupCode.GDskirt4lolaObjects3, "shoe31lola": gdjs.dressupCode.GDshoe31lolaObjects3, "shoe32lola": gdjs.dressupCode.GDshoe32lolaObjects3, "top1lola": gdjs.dressupCode.GDtop1lolaObjects3, "sskirt3": gdjs.dressupCode.GDsskirt3Objects3, "sshoes1": gdjs.dressupCode.GDsshoes1Objects3, "sshoes12": gdjs.dressupCode.GDsshoes12Objects3, "sshoes2": gdjs.dressupCode.GDsshoes2Objects3, "sshoes21": gdjs.dressupCode.GDsshoes21Objects3, "sshoe4": gdjs.dressupCode.GDsshoe4Objects3, "sshoe41": gdjs.dressupCode.GDsshoe41Objects3, "sshoe5": gdjs.dressupCode.GDsshoe5Objects3, "sshot51": gdjs.dressupCode.GDsshot51Objects3, "sstone": gdjs.dressupCode.GDsstoneObjects3, "lleftear": gdjs.dressupCode.GDlleftearObjects3, "bbracelet2": gdjs.dressupCode.GDbbracelet2Objects3, "oobodok3": gdjs.dressupCode.GDoobodok3Objects3, "ssumka": gdjs.dressupCode.GDssumkaObjects3, "bbracelet1": gdjs.dressupCode.GDbbracelet1Objects3, "klubnika": gdjs.dressupCode.GDklubnikaObjects3, "busy": gdjs.dressupCode.GDbusyObjects3, "oobodok1": gdjs.dressupCode.GDoobodok1Objects3, "rrightear": gdjs.dressupCode.GDrrightearObjects3, "bberet": gdjs.dressupCode.GDbberetObjects3, "gglasses": gdjs.dressupCode.GDgglassesObjects3, "sskirt4": gdjs.dressupCode.GDsskirt4Objects3, "sskirt5": gdjs.dressupCode.GDsskirt5Objects3, "ttop2": gdjs.dressupCode.GDttop2Objects3, "ttop5": gdjs.dressupCode.GDttop5Objects3, "ddress": gdjs.dressupCode.GDddressObjects3, "glasses1": gdjs.dressupCode.GDglasses1Objects3, "ttop3": gdjs.dressupCode.GDttop3Objects3, "sskirt1": gdjs.dressupCode.GDsskirt1Objects3, "eyes2": gdjs.dressupCode.GDeyes2Objects3, "stone2": gdjs.dressupCode.GDstone2Objects3, "stone1": gdjs.dressupCode.GDstone1Objects3, "bracelet3": gdjs.dressupCode.GDbracelet3Objects3, "leftear": gdjs.dressupCode.GDleftearObjects3, "rightear": gdjs.dressupCode.GDrightearObjects3, "bandana": gdjs.dressupCode.GDbandanaObjects3, "flower": gdjs.dressupCode.GDflowerObjects3, "zakolka": gdjs.dressupCode.GDzakolkaObjects3, "bracelet2": gdjs.dressupCode.GDbracelet2Objects3, "bracelet1": gdjs.dressupCode.GDbracelet1Objects3, "obodok": gdjs.dressupCode.GDobodokObjects3, "top5": gdjs.dressupCode.GDtop5Objects3, "dress": gdjs.dressupCode.GDdressObjects3, "top4": gdjs.dressupCode.GDtop4Objects3, "top3": gdjs.dressupCode.GDtop3Objects3, "top2": gdjs.dressupCode.GDtop2Objects3, "skirt5": gdjs.dressupCode.GDskirt5Objects3, "skirt4": gdjs.dressupCode.GDskirt4Objects3, "skirt3": gdjs.dressupCode.GDskirt3Objects3, "skirt2": gdjs.dressupCode.GDskirt2Objects3, "skirt1": gdjs.dressupCode.GDskirt1Objects3, "shor52": gdjs.dressupCode.GDshor52Objects3, "shoe51": gdjs.dressupCode.GDshoe51Objects3, "shoe42": gdjs.dressupCode.GDshoe42Objects3, "shoe41": gdjs.dressupCode.GDshoe41Objects3, "shoe31": gdjs.dressupCode.GDshoe31Objects3, "shoe32": gdjs.dressupCode.GDshoe32Objects3, "shoe22": gdjs.dressupCode.GDshoe22Objects3, "shoe21": gdjs.dressupCode.GDshoe21Objects3, "shoe12": gdjs.dressupCode.GDshoe12Objects3, "shoe11": gdjs.dressupCode.GDshoe11Objects3});
 gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDchanelObjects3ObjectsGDgdjs_9546dressupCode_9546GDlolaObjects3ObjectsGDgdjs_9546dressupCode_9546GDpollenObjects3Objects = Hashtable.newFrom({"chanel": gdjs.dressupCode.GDchanelObjects3, "lola": gdjs.dressupCode.GDlolaObjects3, "pollen": gdjs.dressupCode.GDpollenObjects3});
-gdjs.dressupCode.eventsList3 = function(runtimeScene) {
+gdjs.dressupCode.eventsList5 = function(runtimeScene) {
 
-};gdjs.dressupCode.eventsList4 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList6 = function(runtimeScene) {
 
 {
 
@@ -5034,7 +5127,7 @@ if (true) {
 }
 
 
-};gdjs.dressupCode.eventsList5 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList7 = function(runtimeScene) {
 
 {
 
@@ -5952,14 +6045,14 @@ isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.dressupCode.
 if (isConditionTrue_0) {
 
 { //Subevents: 
-gdjs.dressupCode.eventsList4(runtimeScene);} //Subevents end.
+gdjs.dressupCode.eventsList6(runtimeScene);} //Subevents end.
 }
 }
 
 }
 
 
-};gdjs.dressupCode.eventsList6 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList8 = function(runtimeScene) {
 
 {
 
@@ -5970,7 +6063,7 @@ isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.dressupCode.eventsList1(runtimeScene);} //End of subevents
+gdjs.dressupCode.eventsList3(runtimeScene);} //End of subevents
 }
 
 }
@@ -12751,7 +12844,7 @@ gdjs.dressupCode.GDshoe11Objects2.length = k;
 if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.dressupCode.eventsList2(runtimeScene);} //End of subevents
+gdjs.dressupCode.eventsList4(runtimeScene);} //End of subevents
 }
 
 }
@@ -12772,7 +12865,7 @@ if (isConditionTrue_0) {
 {gdjs.evtTools.variable.variableClearChildren(runtimeScene.getGame().getVariables().getFromIndex(2));
 }
 { //Subevents
-gdjs.dressupCode.eventsList5(runtimeScene);} //End of subevents
+gdjs.dressupCode.eventsList7(runtimeScene);} //End of subevents
 }
 
 }
@@ -12785,7 +12878,7 @@ gdjs.dressupCode.eventsList5(runtimeScene);} //End of subevents
 }
 
 
-};gdjs.dressupCode.eventsList7 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList9 = function(runtimeScene) {
 
 {
 
@@ -15609,7 +15702,7 @@ for(var i = 0, len = gdjs.dressupCode.GDshoe11Objects4.length ;i < len;++i) {
 }
 
 
-};gdjs.dressupCode.eventsList8 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList10 = function(runtimeScene) {
 
 {
 
@@ -15625,7 +15718,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.dressupCode.eventsList9 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList11 = function(runtimeScene) {
 
 {
 
@@ -15641,7 +15734,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.dressupCode.eventsList10 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList12 = function(runtimeScene) {
 
 {
 
@@ -18465,7 +18558,7 @@ for(var i = 0, len = gdjs.dressupCode.GDshoe11Objects3.length ;i < len;++i) {
 }
 
 
-};gdjs.dressupCode.eventsList11 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList13 = function(runtimeScene) {
 
 {
 
@@ -19407,7 +19500,7 @@ let isConditionTrue_0 = false;
 if (true) {
 
 { //Subevents: 
-gdjs.dressupCode.eventsList7(runtimeScene);} //Subevents end.
+gdjs.dressupCode.eventsList9(runtimeScene);} //Subevents end.
 }
 }
 
@@ -19437,7 +19530,7 @@ if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().getFromIndex(4).add(1);
 }
 { //Subevents
-gdjs.dressupCode.eventsList8(runtimeScene);} //End of subevents
+gdjs.dressupCode.eventsList10(runtimeScene);} //End of subevents
 }
 
 }
@@ -19466,7 +19559,7 @@ if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().getFromIndex(4).sub(1);
 }
 { //Subevents
-gdjs.dressupCode.eventsList9(runtimeScene);} //End of subevents
+gdjs.dressupCode.eventsList11(runtimeScene);} //End of subevents
 }
 
 }
@@ -20499,7 +20592,7 @@ let isConditionTrue_0 = false;
 if (true) {
 
 { //Subevents: 
-gdjs.dressupCode.eventsList10(runtimeScene);} //Subevents end.
+gdjs.dressupCode.eventsList12(runtimeScene);} //Subevents end.
 }
 }
 
@@ -20509,7 +20602,7 @@ gdjs.dressupCode.eventsList10(runtimeScene);} //Subevents end.
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDlolaiconObjects2Objects = Hashtable.newFrom({"lolaicon": gdjs.dressupCode.GDlolaiconObjects2});
 gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDpoliconObjects2Objects = Hashtable.newFrom({"policon": gdjs.dressupCode.GDpoliconObjects2});
 gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDchaniconObjects1Objects = Hashtable.newFrom({"chanicon": gdjs.dressupCode.GDchaniconObjects1});
-gdjs.dressupCode.eventsList12 = function(runtimeScene) {
+gdjs.dressupCode.eventsList14 = function(runtimeScene) {
 
 {
 
@@ -20650,7 +20743,7 @@ gdjs.copyArray(runtimeScene.getObjects("pollen"), gdjs.dressupCode.GDpollenObjec
 
 
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDiconObjects2Objects = Hashtable.newFrom({"icon": gdjs.dressupCode.GDiconObjects2});
-gdjs.dressupCode.eventsList13 = function(runtimeScene) {
+gdjs.dressupCode.eventsList15 = function(runtimeScene) {
 
 {
 
@@ -20691,7 +20784,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDlolaiconObjects2Objects = Hashtable.newFrom({"lolaicon": gdjs.dressupCode.GDlolaiconObjects2});
-gdjs.dressupCode.eventsList14 = function(runtimeScene) {
+gdjs.dressupCode.eventsList16 = function(runtimeScene) {
 
 {
 
@@ -20728,7 +20821,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDpoliconObjects2Objects = Hashtable.newFrom({"policon": gdjs.dressupCode.GDpoliconObjects2});
-gdjs.dressupCode.eventsList15 = function(runtimeScene) {
+gdjs.dressupCode.eventsList17 = function(runtimeScene) {
 
 {
 
@@ -20765,7 +20858,7 @@ if (isConditionTrue_0) {
 
 
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDchaniconObjects2Objects = Hashtable.newFrom({"chanicon": gdjs.dressupCode.GDchaniconObjects2});
-gdjs.dressupCode.eventsList16 = function(runtimeScene) {
+gdjs.dressupCode.eventsList18 = function(runtimeScene) {
 
 {
 
@@ -20801,7 +20894,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.dressupCode.eventsList17 = function(runtimeScene) {
+};gdjs.dressupCode.eventsList19 = function(runtimeScene) {
 
 {
 
@@ -21394,127 +21487,20 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDMuteObjects1Objects = Hashtable.newFrom({"Mute": gdjs.dressupCode.GDMuteObjects1});
-gdjs.dressupCode.eventsList18 = function(runtimeScene) {
-
-{
-
-gdjs.copyArray(gdjs.dressupCode.GDMuteObjects1, gdjs.dressupCode.GDMuteObjects2);
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.dressupCode.GDMuteObjects2.length;i<l;++i) {
-    if ( gdjs.dressupCode.GDMuteObjects2[i].getVariableBoolean(gdjs.dressupCode.GDMuteObjects2[i].getVariables().getFromIndex(0), false, false) ) {
-        isConditionTrue_0 = true;
-        gdjs.dressupCode.GDMuteObjects2[k] = gdjs.dressupCode.GDMuteObjects2[i];
-        ++k;
-    }
-}
-gdjs.dressupCode.GDMuteObjects2.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.dressupCode.GDMuteObjects2 */
-{for(var i = 0, len = gdjs.dressupCode.GDMuteObjects2.length ;i < len;++i) {
-    gdjs.dressupCode.GDMuteObjects2[i].getBehavior("Animation").setAnimationName("Unmuted");
-}
-}{gdjs.evtTools.sound.setMusicOnChannelVolume(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 100);
-}}
-
-}
-
-
-{
-
-/* Reuse gdjs.dressupCode.GDMuteObjects1 */
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.dressupCode.GDMuteObjects1.length;i<l;++i) {
-    if ( gdjs.dressupCode.GDMuteObjects1[i].getVariableBoolean(gdjs.dressupCode.GDMuteObjects1[i].getVariables().getFromIndex(0), true, false) ) {
-        isConditionTrue_0 = true;
-        gdjs.dressupCode.GDMuteObjects1[k] = gdjs.dressupCode.GDMuteObjects1[i];
-        ++k;
-    }
-}
-gdjs.dressupCode.GDMuteObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.dressupCode.GDMuteObjects1 */
-{for(var i = 0, len = gdjs.dressupCode.GDMuteObjects1.length ;i < len;++i) {
-    gdjs.dressupCode.GDMuteObjects1[i].getBehavior("Animation").setAnimationName("Muted");
-}
-}{gdjs.evtTools.sound.setMusicOnChannelVolume(runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 0);
-}}
-
-}
-
-
-};gdjs.dressupCode.eventsList19 = function(runtimeScene) {
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "Песня одевалка.mp3", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), true, 10, 1);
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("Mute"), gdjs.dressupCode.GDMuteObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDMuteObjects1Objects, runtimeScene, true, false);
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.dressupCode.GDMuteObjects1 */
-{for(var i = 0, len = gdjs.dressupCode.GDMuteObjects1.length ;i < len;++i) {
-    gdjs.dressupCode.GDMuteObjects1[i].returnVariable(gdjs.dressupCode.GDMuteObjects1[i].getVariables().getFromIndex(0)).toggle();
-}
-}
-{ //Subevents
-gdjs.dressupCode.eventsList18(runtimeScene);} //End of subevents
-}
-
-}
-
-
 };gdjs.dressupCode.mapOfGDgdjs_9546dressupCode_9546GDchicObjects1Objects = Hashtable.newFrom({"chic": gdjs.dressupCode.GDchicObjects1});
 gdjs.dressupCode.eventsList20 = function(runtimeScene) {
 
 {
 
 
-gdjs.dressupCode.eventsList6(runtimeScene);
+gdjs.dressupCode.eventsList1(runtimeScene);
 }
 
 
 {
 
 
-gdjs.dressupCode.eventsList11(runtimeScene);
-}
-
-
-{
-
-
-gdjs.dressupCode.eventsList12(runtimeScene);
-}
-
-
-{
-
-
-
+gdjs.dressupCode.eventsList8(runtimeScene);
 }
 
 
@@ -21529,6 +21515,13 @@ gdjs.dressupCode.eventsList13(runtimeScene);
 
 
 gdjs.dressupCode.eventsList14(runtimeScene);
+}
+
+
+{
+
+
+
 }
 
 
@@ -21550,6 +21543,13 @@ gdjs.dressupCode.eventsList16(runtimeScene);
 
 
 gdjs.dressupCode.eventsList17(runtimeScene);
+}
+
+
+{
+
+
+gdjs.dressupCode.eventsList18(runtimeScene);
 }
 
 
